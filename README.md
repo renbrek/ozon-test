@@ -10,3 +10,6 @@
 Portrait                   |  Landscape
 :-------------------------:|:-------------------------:
 ![](https://github.com/renbrek/ozon-test/blob/main/pp-portrait.gif)  | ![](https://github.com/renbrek/ozon-test/blob/main/pp-landscape.gif)
+
+### Примечания
+Так как шрифт _GT Eesti Pro Display_ платный, использовался альтернативнвный _Poppins_
