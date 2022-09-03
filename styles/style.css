@@ -40,7 +40,7 @@ body {
   position: relative;
   display: grid;
   place-items: center;
-  transition: linear 0.2s;
+  transition: linear 0.3s;
 }
 
 .indicator::before {
@@ -50,7 +50,7 @@ body {
   height: 84%;
   width: 84%;
   background-color: #fff;
-  transition: linear 0.2s;
+  transition: linear 0.3s;
 }
 
 .settings {
@@ -88,6 +88,10 @@ body {
   transition: 0.3s;
 }
 
+.switch__input:focus + .slider {
+  box-shadow: 1px 1px 10px 1px black;
+}
+
 .slider::before {
   position: absolute;
   content: '';
@@ -115,6 +119,10 @@ body {
   text-align: center;
   outline: none;
   height: 40;
+  transition: 0.3s;
+}
+#value:focus {
+  box-shadow: 1px 1px 10px 1px black;
 }
 
 input::-webkit-outer-spin-button,
@@ -134,7 +142,7 @@ input[type='number'] {
 }
 
 .rotate {
-  animation: 2s rotate360 infinite linear;
+  animation: 2s rotate360 infinite ease-in-out;
 }
 
 @media screen and (orientation: portrait) {

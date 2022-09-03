@@ -3,15 +3,22 @@ let input = document.getElementById('value');
 let hideCheckbox = document.getElementById('hide');
 let animateCheckbox = document.getElementById('animate');
 
-let progressInitialValue = 75;
+const progressInitialValue = 75;
 input.value = progressInitialValue;
 
 input.addEventListener('input', () => {
+  const minValue = 0;
+  const maxValue = 100;
+
+  if (input.value < minValue) input.value = minValue;
+  if (input.value > maxValue) input.value = maxValue;
   setProgress(input.value);
 });
 
 animateCheckbox.addEventListener('change', () => {
-  animateCheckbox.checked ? rotateOn() : rotateOff();
+  const rotateClass = 'rotate';
+
+  indicator.classList.toggle(rotateClass);
 });
 
 hideCheckbox.addEventListener('change', () => {
@@ -25,16 +32,6 @@ const setProgress = (progressSetValue) => {
     #005bff ${progressSetValue * 3.6}deg,
     #eff3f6 ${progressSetValue * 3.6}deg
     )`;
-};
-
-const rotateClass = 'rotate';
-
-const rotateOn = () => {
-  indicator.classList.add(rotateClass);
-};
-
-const rotateOff = () => {
-  indicator.classList.remove(rotateClass);
 };
 
 setProgress(input.value);
