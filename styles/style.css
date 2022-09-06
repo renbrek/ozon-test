@@ -33,7 +33,6 @@ body {
 }
 
 .indicator {
-  margin-top: 45px;
   height: 7.5rem;
   width: 7.5rem;
   border-radius: 50%;
@@ -51,6 +50,9 @@ body {
   width: 84%;
   background-color: #fff;
   transition: linear 0.3s;
+}
+
+.indicator-wrapper {
 }
 
 .settings {
@@ -149,14 +151,16 @@ input[type='number'] {
   .progress {
     grid-template-rows: 47% 53%;
   }
+  .indicator-wrapper {
+    margin-top: 45px;
+  }
 }
 
 @media screen and (orientation: landscape) {
   .progress {
     grid-template-columns: 47% 53%;
   }
-  .indicator {
-    margin-bottom: 19%;
+  .indicator-wrapper {
     margin-left: 49px;
   }
 
